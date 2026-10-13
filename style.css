@@ -1,0 +1,29 @@
+/* Aturan khusus cetak halaman A4 */
+@media print {
+    body * { 
+        visibility: hidden; 
+    }
+    #printable-area, #printable-area * { 
+        visibility: visible; 
+    }
+    #printable-area {
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        width: 100%;
+        box-shadow: none !important; 
+        border: none !important; 
+        padding: 0 !important; 
+        margin: 0 !important;
+    }
+    .no-print { 
+        display: none !important; 
+    }
+}
+
+/* Proporsi Kertas A4 */
+.page-a4 {
+    width: 100%;
+    min-height: 297mm;
+    background: white;
+}
